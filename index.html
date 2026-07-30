@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--
+  TreasureWalk — Support page.
+  NOTE: the contact address below is hello@treasurewalk.app. Make sure that
+  inbox actually reaches you before publishing — App Review will email it.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TreasureWalk — Support</title>
+<style>
+  :root {
+    --bg: #faf7f2;
+    --card: #ffffff;
+    --ink: #1f2430;
+    --muted: #5b6472;
+    --primary: #7b4bd8;
+    --border: #ece7df;
+    --radius: 16px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 22px 80px; }
+  header { text-align: center; margin-bottom: 8px; }
+  h1 { font-size: 2rem; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .sub { color: var(--muted); margin: 0; }
+  .lang { display: flex; gap: 8px; justify-content: center; margin: 22px 0 8px; }
+  .lang button {
+    border: 1px solid var(--border); background: var(--card); color: var(--muted);
+    padding: 7px 16px; border-radius: 999px; font: inherit; font-size: 0.9rem; cursor: pointer;
+  }
+  .lang button[aria-selected="true"] { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 26px 28px; margin-top: 20px;
+  }
+  h2 { font-size: 1.15rem; margin: 26px 0 8px; letter-spacing: -0.01em; }
+  h2:first-child { margin-top: 0; }
+  p, li { color: var(--ink); }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  a { color: var(--primary); }
+  .muted { color: var(--muted); font-size: 0.92rem; }
+  .contact {
+    background: rgba(123,75,216,0.06); border: 1px solid rgba(123,75,216,0.18);
+    border-radius: 12px; padding: 16px 18px; margin: 14px 0 4px; text-align: center;
+  }
+  .contact a { font-size: 1.1rem; font-weight: 600; }
+  footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 34px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>TreasureWalk — Support</h1>
+    <p class="sub">Help &amp; contact</p>
+  </header>
+
+  <div class="lang" role="tablist" aria-label="Language">
+    <button id="btn-en" role="tab" aria-selected="true" onclick="setLang('en')">English</button>
+    <button id="btn-fr" role="tab" aria-selected="false" onclick="setLang('fr')">Français</button>
+  </div>
+
+  <!-- ============================ ENGLISH ============================ -->
+  <section id="en" class="card" lang="en">
+    <p>Need a hand with <strong>TreasureWalk</strong>? We're happy to help. Email us and we'll
+       get back to you as soon as we can.</p>
+
+    <div class="contact">
+      <a href="mailto:hello@treasurewalk.app">hello@treasurewalk.app</a>
+    </div>
+    <p class="muted">Please include your device model and iOS version, and the name of the quest,
+       so we can help faster.</p>
+
+    <h2>Frequently asked questions</h2>
+
+    <h2>How do I start a quest?</h2>
+    <p>On the home screen, tap a quest to see its details and starting point, then tap
+       <strong>Start</strong>. Head to the meeting point shown on the map and follow the steps —
+       directions, story, and challenges — one at a time. You can pause anytime; your progress is
+       saved and you'll pick up exactly where you left off.</p>
+
+    <h2>A photo challenge won't validate</h2>
+    <p>Photo challenges use AI to check that your picture shows the right subject. If it isn't
+       accepted, make sure the subject fills the frame, you have good lighting, and you're at the
+       correct spot. After one attempt you can reveal a <strong>hint</strong>, and after three you
+       can <strong>skip</strong> the step and continue. A working internet connection is required
+       for photo checks.</p>
+
+    <h2>I bought a quest but it's locked (or I got a new phone)</h2>
+    <p>Open the <strong>Profile</strong> screen and tap <strong>Restore Purchases</strong>. Your
+       purchases are tied to your Apple ID and will unlock again. If iCloud sync is on (the default),
+       your progress and purchases also restore automatically on a new device.</p>
+
+    <h2>Do I need internet or location access?</h2>
+    <p>You need internet only for photo challenges; the rest works offline. TreasureWalk does
+       <strong>not</strong> track your location — you navigate using the written directions and the
+       quest map.</p>
+
+    <h2>Refunds</h2>
+    <p>Purchases are handled by Apple. To request a refund, visit
+       <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>
+       and sign in with your Apple ID.</p>
+
+    <h2>Privacy</h2>
+    <p>See our <a href="https://treasurewalk.github.io/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+  </section>
+
+  <!-- ============================ FRANÇAIS ============================ -->
+  <section id="fr" class="card" lang="fr" hidden>
+    <p>Besoin d'aide avec <strong>TreasureWalk</strong> ? Nous sommes là pour ça. Écrivez-nous et
+       nous vous répondrons dès que possible.</p>
+
+    <div class="contact">
+      <a href="mailto:hello@treasurewalk.app">hello@treasurewalk.app</a>
+    </div>
+    <p class="muted">Merci d'indiquer votre modèle d'appareil, votre version d'iOS et le nom de la
+       quête, pour que nous puissions vous aider plus vite.</p>
+
+    <h2>Questions fréquentes</h2>
+
+    <h2>Comment démarrer une quête ?</h2>
+    <p>Sur l'écran d'accueil, touchez une quête pour voir son détail et son point de départ, puis
+       touchez <strong>Commencer</strong>. Rendez-vous au point de rendez-vous indiqué sur la carte
+       et suivez les étapes — directions, récit et défis — une par une. Vous pouvez faire une pause
+       à tout moment : votre progression est enregistrée et vous reprendrez exactement là où vous
+       vous étiez arrêté.</p>
+
+    <h2>Un défi photo ne se valide pas</h2>
+    <p>Les défis photo utilisent l'IA pour vérifier que votre photo montre le bon sujet. Si elle
+       n'est pas acceptée, assurez-vous que le sujet remplit le cadre, que l'éclairage est bon et
+       que vous êtes au bon endroit. Après un essai, vous pouvez révéler un <strong>indice</strong>,
+       et après trois, vous pouvez <strong>passer</strong> l'étape et continuer. Une connexion
+       Internet est nécessaire pour la validation des photos.</p>
+
+    <h2>J'ai acheté une quête mais elle est verrouillée (ou j'ai changé de téléphone)</h2>
+    <p>Ouvrez l'écran <strong>Profil</strong> et touchez <strong>Restaurer les achats</strong>. Vos
+       achats sont liés à votre identifiant Apple et seront de nouveau débloqués. Si la
+       synchronisation iCloud est activée (par défaut), votre progression et vos achats se
+       restaurent aussi automatiquement sur un nouvel appareil.</p>
+
+    <h2>Ai-je besoin d'Internet ou de la localisation ?</h2>
+    <p>Internet n'est nécessaire que pour les défis photo ; le reste fonctionne hors ligne.
+       TreasureWalk ne suit <strong>pas</strong> votre position — vous vous repérez grâce aux
+       directions écrites et à la carte de la quête.</p>
+
+    <h2>Remboursements</h2>
+    <p>Les achats sont gérés par Apple. Pour demander un remboursement, rendez-vous sur
+       <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>
+       et connectez-vous avec votre identifiant Apple.</p>
+
+    <h2>Confidentialité</h2>
+    <p>Consultez notre <a href="https://treasurewalk.github.io/privacy/" target="_blank" rel="noopener">politique de confidentialité</a>.</p>
+  </section>
+
+  <footer>TreasureWalk · Mael Gaillard</footer>
+</div>
+
+<script>
+  function setLang(lang) {
+    var en = document.getElementById('en'), fr = document.getElementById('fr');
+    var isFr = lang === 'fr';
+    en.hidden = isFr; fr.hidden = !isFr;
+    document.getElementById('btn-en').setAttribute('aria-selected', String(!isFr));
+    document.getElementById('btn-fr').setAttribute('aria-selected', String(isFr));
+    document.documentElement.lang = lang;
+  }
+  // Default to the browser's language when it is French.
+  if ((navigator.language || 'en').toLowerCase().startsWith('fr')) setLang('fr');
+</script>
+</body>
+</html>
